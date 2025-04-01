@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "السافت تولز";
+}
+
+<style>
+    a{
+        font-size:25px;
+    }
+</style>
+
+<div class="container">
+    <div class="section">
+        <h5 class="pagetitle">السافت نگارا: تیتر نویس</h5>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="row ">
+            <div class="col s12 pad-0">
+                <div class="pad-15">
+                    <form action="/News/titr_writer" method="post" enctype="multipart/form-data" id="formData">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea name="input" id="textarea-normal" class="materialize-textarea"></textarea>
+                                <label for="textarea-normal">چند پاراگراف از خبر بنویسید</label>
+                            </div>
+                        </div>
+                        <div id="fc" class="row">
+                            <button id="showMessageButton" class="waves-effect waves-light btn-large bg-primary fa-send" type="submit" onclick="show()">
+                                نگارش تیتر
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <h5 id="list" class="pagetitle">راهنمای استفاده</h5>
+        <div class="row ">
+            <div class="col s12 pad-0">
+                <h5 class="bot-20 sec-tit"></h5>
+                <div class="card darken-1">
+                    <div class="card-content">
+                        <span class="card-title">چگونه با تیتر نویس تیتر بنویسیم؟</span>
+                        <p>برای مثال من یک خبر دارم که هنوز لید و تیتر برای اون ننوشتم. در ابتدا، چند پاراگراف از خبر رو به صورت هر کدوم در یک خط کپی می کنم و بعد در محل مورد نظر (قسمت بالا) جایگذاری می کنم. حالا فقط کافیه که روی کلید نگارش تیتر کلیک کنم. و تمام!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        function show(){
+       document.getElementById('overlayMessage').style.display = 'flex'; // نمایش متن
+    }
+</script>

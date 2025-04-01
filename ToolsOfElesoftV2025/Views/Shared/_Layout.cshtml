@@ -1,0 +1,291 @@
+﻿
+<!DOCTYPE html>
+<html style="direction:rtl; text-align:right;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <meta content="themepassion" name="author" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #overlayMessage {
+            text-align: center;
+            position: fixed;
+            display:none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .checkbox-lg {
+            width: 1.5rem;
+            height: 1.5rem;
+            accent-color: dodgerblue;
+        }
+
+        .a-link {
+            color:blue;
+            text-decoration-line:underline;
+            word-break:break-all;
+        }
+
+        .blue-tick {
+            width:35px;
+            height:auto;
+            float:inline-start;
+        }
+
+        .short-text-2{
+            width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            direction: rtl;
+            font-size:25px;
+        }
+    </style>
+    <link rel="manifest" href="~/Theme/assets//images/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/Theme/assets//images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="~/Theme/assets//css/preloader.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="~/Theme/modules//materialize/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="~/Theme/modules//fonts/mdi/materialdesignicons.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="~/Theme/modules//perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!-- CORE CSS FRAMEWORK - END -->
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="~/Theme/assets//css/style.css" type="text/css" rel="stylesheet" media="screen,projection" id="main-style" />
+    <!-- CORE CSS TEMPLATE - END -->
+
+
+    <link type="text/css" rel="stylesheet" href="~/css/site.css">
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body style="font-family:IranSens;" class="html" data-header="light" data-footer="dark" data-header_align="center" data-menu_type="left"
+  data-menu="light" data-menu_icons="on" data-footer_type="left" data-site_mode="light" data-footer_menu="show"
+  data-footer_menu_style="light">
+
+
+
+  <!-- START navigation -->
+    <!-- START navigation -->
+    <nav b-npbbutxpa0 class="fix_topscroll logo_on_fixed  topbar navigation" role="navigation">
+        <div b-npbbutxpa0 class="nav-wrapper container">
+            <a b-npbbutxpa0 onclick="location.reload();" class="waves-effect waves-circle navicon back-butt htmlmode show-on-large">
+                <i b-npbbutxpa0 id="rotatingIcon" class="mdi mdi-refresh" style="color:#E43341;"></i>
+            </a>
+            <a b-npbbutxpa0 href="#" data-target="slide-nav" class="waves-effect waves-circle navicon sidenav-trigger show-on-large">
+                <i b-npbbutxpa0 class="mdi mdi-menu"></i>
+            </a>
+            <a b-npbbutxpa0 href="#" data-target="slide-settings"
+               class="waves-effect waves-circle navicon right sidenav-trigger show-on-large pulse">
+                <i b-npbbutxpa0 class="mdi mdi-settings-outline"></i>
+            </a>
+            <a b-npbbutxpa0 href="#" data-target="" class="waves-effect waves-circle navicon right nav-site-mode show-on-large">
+                <i b-npbbutxpa0 class="mdi mdi-invert-colors mdi-transition1"></i>
+            </a>
+            <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+        </div>
+    </nav>
+    <ul id="slide-settings" class="sidenav sidesettings right fixed">
+      <li class="menulinks">
+        <ul class="collapsible">
+          <!-- MAIN MENU - START -->
+
+          <li class="sh-wrap">
+            <div class="subheader">تنظیمات پوسته</div>
+          </li>
+          <li class="lvl1  theme">
+            <div class="waves-effect appsettings " data-type="theme" data-value="red">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-intermediate red-text text-lighten-2"></i>
+                <span class="title">قرمز</span> </a>
+            </div>
+          </li>
+          <li class="lvl1  theme">
+            <div class="waves-effect appsettings " data-type="theme" data-value="orange">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-blank-outline deep-orange-text text-lighten-2"></i>
+                <span class="title">نارنجی</span> </a>
+            </div>
+          </li>
+          <li class="lvl1  theme">
+            <div class="waves-effect appsettings " data-type="theme" data-value="blue">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-blank-outline blue-text text-lighten-2"></i>
+                <span class="title">آبی</span> </a>
+            </div>
+          </li>
+          <li class="lvl1  theme">
+            <div class="waves-effect appsettings " data-type="theme" data-value="pink">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-blank-outline pink-text text-lighten-2"></i>
+                <span class="title">صورتی</span> </a>
+            </div>
+          </li>
+          <li class="lvl1  theme">
+            <div class="waves-effect appsettings " data-type="theme" data-value="light-green">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-blank-outline light-green-text text-lighten-2"></i>
+                <span class="title">سبز</span> </a>
+            </div>
+          </li>
+          <li class="lvl1  theme">
+            <div class="waves-effect appsettings " data-type="theme" data-value="purple">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-blank-outline purple-text text-lighten-2"></i>
+                <span class="title">بنفش</span> </a>
+            </div>
+          </li>
+          <li class="lvl1  theme">
+            <div class="waves-effect appsettings " data-type="theme" data-value="amber">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-blank-outline amber-text"></i>
+                <span class="title">زرد</span> </a>
+            </div>
+          </li>
+          <li class="lvl1  theme">
+            <div class="waves-effect appsettings " data-type="theme" data-value="cyan">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-blank-outline cyan-text text-lighten-2"></i>
+                <span class="title">فیروزه ای</span> </a>
+            </div>
+          </li>
+          <li class="lvl1  theme">
+            <div class="waves-effect appsettings " data-type="theme" data-value="grey">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-blank-outline grey-text text-darken-2"></i>
+                <span class="title">مشکی</span> </a>
+            </div>
+          </li>
+          <li class="sep-wrap">
+            <div class="divider"></div>
+          </li>
+          <li class="sh-wrap">
+            <div class="subheader">حالت پوسته</div>
+          </li>
+          <li class="lvl1  site_mode">
+            <div class="waves-effect appsettings active" data-type="site_mode" data-value="light">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-intermediate"></i>
+                <span class="title">حالت روشن</span> </a>
+            </div>
+          </li>
+          <li class="lvl1  site_mode">
+            <div class="waves-effect appsettings " data-type="site_mode" data-value="dark">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-blank-outline"></i>
+                <span class="title">حالت تاریک</span> </a>
+            </div>
+          </li>
+          <li class="sep-wrap">
+            <div class="divider"></div>
+          </li>
+          <li class="sh-wrap">
+            <div class="subheader">قرارگیری آیکون ها</div>
+          </li>
+          <li class="lvl1  header_align">
+            <div class="waves-effect appsettings " data-type="header_align" data-value="left">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-intermediate"></i>
+                <span class="title">انتقال آیکون ها به راست</span> </a>
+            </div>
+          </li>
+          <li class="lvl1  header_align">
+            <div class="waves-effect appsettings active" data-type="header_align" data-value="center">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-blank-outline"></i>
+                <span class="title">قرارگیری متعادل</span> </a>
+            </div>
+          </li>
+          <li class="lvl1  header_align">
+            <div class="waves-effect appsettings " data-type="header_align" data-value="right">
+              <a href="#!">
+                <i class="mdi mdi-checkbox-blank-outline"></i>
+                <span class="title">انتقال آیکون ها به چپ</span> </a>
+            </div>
+          </li>
+          <li class="sep-wrap">
+            <div class="divider"></div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  </ul>
+    <div id="overlayMessage">
+        <p style="font-size:20px;"">در حال پردازش... این عمل ممکن است چند ثانیه طول بکشد</p>
+    </div>
+    @RenderBody()
+    <script type="text/javascript">
+        // This is the "Offline copy of pages" service worker
+
+        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+        // Check compatibility for the browser we're running this in
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[PWA Builder] active service worker found, no need to register");
+            } else {
+                // Register the service worker
+                navigator.serviceWorker
+                    .register("pwabuilder-sw.js", {
+                        scope: "./"
+                    })
+                    .then(function (reg) {
+                        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                    });
+            }
+        }
+    </script>
+    <script>
+        function rotateIcon() {
+            const icon = document.getElementById('rotatingIcon');
+            let angle = 0;
+            setInterval(() => {
+                angle = (angle + 5) % 360;
+                icon.style.transform = `rotate(${angle}deg)`;
+            }, 15);
+        }
+    </script>
+    <!-- LOAD FILES AT PAGE END FOR FASTER LOADING -->
+    <!-- CORE JS FRAMEWORK - START -->
+    <script src="~/Theme/modules/jquery/jquery-2.2.4.min.js"></script>
+    <script src="~/Theme/modules/materialize/materialize.js"></script>
+    <script src="~/Theme/modules/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="~/Theme/assets/js/variables.js"></script>
+    <!-- CORE JS FRAMEWORK - END -->
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END -->
+    <!-- CORE TEMPLATE JS - START -->
+    <script src="~/Theme/modules/app/init.js"></script>
+    <script src="~/Theme/modules/app/settings.js"></script>
+
+    <script src="~/Theme/modules/app/scripts.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

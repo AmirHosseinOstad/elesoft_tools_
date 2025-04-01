@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "السافت تولز";
+}
+
+<style>
+    a{
+        font-size:25px;
+    }
+</style>
+
+<div class="container">
+    <div class="section">
+        <h5 class="pagetitle">السافت سرآشپز: چی بپزم؟</h5>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="row ">
+            <div class="col s12 pad-0">
+                <div class="pad-15">
+                    <form action="/Cook/tell_me_what" method="post" enctype="multipart/form-data" id="formData">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea name="input" id="textarea-normal" class="materialize-textarea"></textarea>
+                                <label for="textarea-normal">چه خوراکی هایی داخل خونتون موجود هست؟</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea name="input_also" id="textarea-normal" class="materialize-textarea"></textarea>
+                                <label for="textarea-normal">حرف دیگه ای نیست؟</label>
+                            </div>
+                        </div>
+                        <div id="fc" class="row">
+                            <button class="waves-effect waves-light btn-large bg-primary fa-send" type="submit" onclick="show()">
+                                بهم بگو چی بپزم
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="section">
+        <h5 id="list" class="pagetitle">راهنمای استفاده</h5>
+        <div class="row ">
+            <div class="col s12 pad-0">
+                <h5 class="bot-20 sec-tit"></h5>
+                <div class="card darken-1">
+                    <div class="card-content">
+                        <span class="card-title">چگونه از این ابزار استفاده کنیم؟</span>
+                        <p>برای استفاده از این ابزار، کافیه خوراکی ها و مواد غذایی که داخل خونه موجود دارین در قسمت بالایی و هر نکته و حرف و حدیث اضافه ای رو در قسمت پایینی بنویسی و روی کلید کلیک کنی. و تمام!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        function show(){
+       document.getElementById('overlayMessage').style.display = 'flex'; // نمایش متن
+    }
+</script>
