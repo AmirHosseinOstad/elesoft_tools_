@@ -46,10 +46,10 @@ namespace ToolsOfElesoftV2025.Controllers
         {
             string Output = await Api.GetFromAiAsync($"I want to cook a dish called {{${input}}}. Suppose my information is not very good, so explain to me and provide a recipe so that I can do this.\r\n also ${input_also}. write <br/> whenever you need to go to the next line. Write this text in Persian.");
 
-            ViewBag.Output = Output;
+            ViewBag.Output = Output.Replace("\n","<br/>");
             ViewBag.Input = input;
 
-            add_work(input, Output, 5);
+            add_work(input, Output, 6);
 
             return View("result");
         }
